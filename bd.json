@@ -1,0 +1,26 @@
+[{
+    "nombre": "Codependencia de arranque",
+    "descripcion": "La PC solo logra iniciar Windows si está conectada una USB con el instalador del sistema operativo, aunque el SSD es detectado correctamente en BIOS. Sin la USB, arranca directamente en la BIOS o muestra que no hay dispositivo de arranque disponible.",
+    "solucion": "Conectar una USB con el instalador de la misma versión de Windows y luego reparar archivos del sistema con 'sfc /scannow'. Alternativa: formatear e instalar Windows desde cero.",
+    "explicacion": "Ocurre cuando el gestor de arranque (Boot Manager) de Windows se encuentra dañado o ubicado en una partición incorrecta. La USB con el instalador actúa como referencia temporal del arranque, permitiendo al sistema iniciar, pero sin ella no existe una entrada válida del bootloader en el SSD."
+}, {
+    "nombre": "La moneda de la verdad / El BIOS amnésico / CMOS coma",
+    "descripcion": "Al retirar la pila CMOS, la PC enciende (ventiladores y LEDs activos) pero no muestra señal de video ni completa el POST, aunque la fuente y los componentes estén en buen estado.",
+    "solucion": "Reemplazar la pila CMOS por una nueva de 3V.",
+    "explicacion": "La pila CMOS alimenta la memoria que conserva la configuración del BIOS. Cuando pierde voltaje o se retira, el firmware puede quedar en un estado corrupto o con variables inválidas, impidiendo la inicialización del POST y la salida de video."
+}, {
+    "nombre": "El problema de cuerpos / Memoria fuera de lugar",
+    "descripcion": "Después de intercambiar físicamente de posición dos módulos de memoria RAM (manteniéndolos en los mismos slots), el sistema enciende pero no da señal de video ni logra completar el POST, a pesar de que antes funcionaba correctamente.",
+    "solucion": "Volver a colocar los módulos en el orden físico original.",
+    "explicacion": "Algunos BIOS asocian internamente la configuración de los canales de memoria (training) con la posición física de los módulos. Cambiar su orden rompe esa referencia, causando conflicto de inicialización hasta restaurar el orden previo."
+}, {
+    "nombre": "Problema de identidad / El impostor del AM4",
+    "descripcion": "Un PC no enciende debido a un procesador AMD en socket AM4 defectuoso. Con la corriente conectada, al levantar la palanca del socket el sistema arranca y completa el inicio, pero al bajarla se apaga.",
+    "solucion": "Reemplazar el procesador por uno nuevo compatible con el socket AM4.",
+    "explicacion": "El procesador presenta microfisuras o defectos internos que alteran el contacto con los pines del socket. Al liberar presión (palanca arriba), los contactos se alinean temporalmente, permitiendo el arranque; al cerrarla, se pierde continuidad eléctrica y el sistema se apaga."
+}, {
+    "nombre": "El apagón silencioso",
+    "descripcion": "Durante sesiones de juego, el sistema pierde completamente la señal de video mientras el PC permanece encendido y con audio activo. El monitor muestra “Sin señal” o queda en negro, pero el sistema sigue respondiendo.",
+    "solucion": "Determinar cuál componente genera el cuello de botella: reducir procesos si el CPU está saturado, bajar calidad gráfica o limitar FPS si la GPU es el problema, reasignar memoria si hubo reducción de RAM, y verificar estabilidad térmica y energética.",
+    "explicacion": "No se trata de un fallo eléctrico, sino de un bloqueo del proceso de salida de video. Al saturarse CPU, GPU o RAM, se interrumpe la comunicación entre GPU–CPU o GPU–RAM, causando pérdida de señal HDMI sin apagar el sistema. Suele confundirse con error de driver, pero se origina en un desequilibrio de recursos o mala sincronización tras un cambio de hardware."
+}]

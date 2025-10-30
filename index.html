@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCdex – Diagnóstico Técnico</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>⚙ PCdex</h1>
+    <p>Base de datos de fallos, síntomas y soluciones confirmadas</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="text" id="search" placeholder="Buscar problema...">
+      <button id="reload">↻ Recargar</button>
+    </section>
+
+    <section id="problems-container">
+      <p class="loading">Analizando base de datos...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>🧠 PCdex — Catálogo técnico de diagnóstico por comportamiento</p>
+    <p class="creator">Creado por <span class="creator-name">Hackk00</span></p>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="modal-overlay">
+    <div id="modal">
+      <span id="close-modal">✖</span>
+      <h2 id="modal-title"></h2>
+      <h3>Descripción</h3>
+      <p id="modal-descripcion"></p>
+      <h3>Solución</h3>
+      <p id="modal-solucion"></p>
+      <h3>Explicación</h3>
+      <p id="modal-explicacion"></p>
+    </div>
+  </div>
+</body>
+</html>
