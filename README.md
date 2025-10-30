@@ -16,12 +16,15 @@ Su enfoque combina descripciones claras, soluciones probadas y análisis de caus
 - **jQuery** (búsqueda, animaciones y popups)  
 - **JSON** (base de datos local)
 
-## 🚀 Instalación
+## 🚀 Instalación local
 1. Clona o descarga este repositorio.  
 2. Coloca los archivos en la carpeta `htdocs` de **XAMPP**.  
 3. Inicia Apache y abre en el navegador:  
 
 
+## 🌍 Consulta en línea
+También puedes acceder directamente desde GitHub Pages:  
+👉 **[https://hackk00.github.io/PCdex/](https://hackk00.github.io/PCdex/)**
 
 ## 👨‍💻 Autor
 Creado por **Hackk00**  
